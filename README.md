@@ -30,4 +30,4 @@ This is not a return value. This is a file it creates
             id: esbuild1
             uses: officeadminsorted/esbuild-action@master
             with:
-              entrypoint: 'handler.js'
+              files: 'handler.js'
