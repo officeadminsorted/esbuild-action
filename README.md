@@ -1,21 +1,32 @@
 # esbuild-action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This is a simple job to run an (esbuild)[https://github.com/evanw/esbuild] build. 
+
+It is a little simple now will be extended. P.R.s welcome.
 
 ## Inputs
 
-### `who-to-greet`
+### `entrypoint`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The entry point to minify from. Default `"handler.js"`.
 
 ## Outputs
 
-### `time`
+### out.min.js
 
-The time we greeted you.
+This is not a return value. This is a file it creates
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
-with:
-  who-to-greet: 'Mona the Octocat'
+      on: [push]
+
+      jobs:
+        esbuild:
+          runs-on: ubuntu-latest
+          name: Build attempt
+          steps:
+          - name: esbuild
+            id: esbuild1
+            uses: officeadminsorted/esbuild-action@master
+            with:
+              entrypoint: 'handler.js'
