@@ -4,9 +4,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.files }}
+    - ${{ inputs.entry }}
 inputs:	
-  files:
+  entry:
     description: 'The entry point files for compliation'	
     required: true	
     default: 'main.js'
