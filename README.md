@@ -25,6 +25,7 @@ This is not a return value. This is a file it creates
           runs-on: ubuntu-latest
           name: Build attempt
           steps:
+          - uses: actions/checkout@v2
           - name: esbuild
             id: esbuild1
             uses: officeadminsorted/esbuild-action@master
