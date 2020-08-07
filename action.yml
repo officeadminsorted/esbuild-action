@@ -3,3 +3,8 @@ description: 'Builds some javascript using the master branch of https://github.c
 runs:
   using: 'docker'
   image: 'Dockerfile'
+inputs:	
+  entrypoint:
+    description: 'The entry point for compliation'	
+    required: true	
+    default: 'main.js'
