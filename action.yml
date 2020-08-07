@@ -4,7 +4,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
 inputs:	
-  entrypoint:
-    description: 'The entry point for compliation'	
+  files:
+    description: 'The entry point files for compliation'	
     required: true	
     default: 'main.js'
