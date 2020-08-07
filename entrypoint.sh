@@ -1,4 +1,4 @@
 #!/bin/sh -x -e
 
 
-esbuild --bundle --sourcemap  --minify  $1
+esbuild $1 --bundle --sourcemap  --minify --outfile=out.min.js
