@@ -1,6 +1,6 @@
 # esbuild-action
 
-This is a simple job to run an (esbuild)[https://github.com/evanw/esbuild] build. 
+This is a simple job to run an [esbuild](https://github.com/evanw/esbuild) build. 
 
 It is a little simple now will be extended. P.R.s welcome.
 
