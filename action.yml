@@ -1,12 +1,12 @@
 name: 'esbuild'
 description: 'Builds some javascript using the master branch of https://github.com/evanw/esbuild'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.entry }}
 inputs:	
   entry:
     description: 'The entry point files for compliation'	
     required: true	
     default: 'main.js'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.entry }}
