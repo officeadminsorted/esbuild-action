@@ -3,6 +3,8 @@ description: 'Builds some javascript using the master branch of https://github.c
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.files }}
 inputs:	
   files:
     description: 'The entry point files for compliation'	
