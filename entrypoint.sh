@@ -1,5 +1,4 @@
-#!/bin/sh -l
+#!/bin/sh -x -e
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+
+esbuild --bundle --sourcemap  --minify  $1
