@@ -1,4 +1,7 @@
 #!/bin/bash -e
 
-
-esbuild "$1" --bundle --sourcemap  --minify --outfile=out.min.js
+for entry in $INPUT_FILES; do
+  outname=`echo ${entry} | sed 's/\.(js|ts|jsx|tsx)$/.min.js'`
+  echo "Compiling ${entry} to ${outname}"
+  esbuild "$entry" --bundle --sourcemap  --minify --outfile=$outname
+done
