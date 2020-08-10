@@ -6,13 +6,13 @@ It is a little simple now will be extended. P.R.s welcome.
 
 ## Inputs
 
-### `entrypoint`
+### `files`
 
-**Required** The entry point to minify from. Default `"handler.js"`.
+**Required** The files to compile, white space separated. By default 'main.js'
 
 ## Outputs
 
-### out.min.js
+### ${file}.min.js
 
 This is not a return value. This is a file it creates
 
@@ -30,7 +30,8 @@ This is not a return value. This is a file it creates
             id: esbuild1
             uses: officeadminsorted/esbuild-action@master
             with:
-              entry: 'handler.js'
+              files: |
+                  handler.js
           - uses: "marvinpinto/action-automatic-releases@latest"
             with:
               repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -38,4 +39,4 @@ This is not a return value. This is a file it creates
               prerelease: false
               title: "Build"
               files: |
-                out.min.js
+                handler.min.js
