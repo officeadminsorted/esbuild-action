@@ -31,3 +31,11 @@ This is not a return value. This is a file it creates
             uses: officeadminsorted/esbuild-action@master
             with:
               entry: 'handler.js'
+          - uses: "marvinpinto/action-automatic-releases@latest"
+            with:
+              repo_token: "${{ secrets.GITHUB_TOKEN }}"
+              automatic_release_tag: "latest"
+              prerelease: false
+              title: "Build"
+              files: |
+                out.min.js
